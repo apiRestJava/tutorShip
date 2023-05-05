@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import tutor.ship.com.demo.model.Notas;
 
 import java.util.Optional;
-
 public interface NotasRepository extends JpaRepository<Notas,Integer> {
 
     @Override
