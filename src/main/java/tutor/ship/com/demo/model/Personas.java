@@ -5,7 +5,8 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Persona {
+@Table(name = "personas")
+public class Personas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -15,7 +16,9 @@ public class Persona {
     @JoinColumn(name ="tipopersona_id")
     TipoPersona tipopersona_id;
 
+    @Column(name = "nombresapellidos")
     private String nombresApellidos;
+
     private String correo;
     private String matricula;
     private String usuario;

@@ -1,8 +1,6 @@
 package tutor.ship.com.demo.model;
-import ch.qos.logback.core.model.Model;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.Cascade;
 
 @Data
 @Entity
@@ -18,7 +16,7 @@ public class Cursos {
 
     @OneToOne
     @JoinColumn(name ="persona_id")
-    Persona persona_id;
+    Personas persona_id;
 
     private String estado;
 }

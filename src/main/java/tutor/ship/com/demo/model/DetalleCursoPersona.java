@@ -17,7 +17,7 @@ public class DetalleCursoPersona {
 
     @ManyToOne
     @JoinColumn(name = "alumno_id")
-    Persona alumno_id;
+    Personas alumno_id;
 
     @ManyToOne
     @JoinColumn(name = "cronograma_curso_id")
@@ -25,7 +25,7 @@ public class DetalleCursoPersona {
 
     @ManyToOne
     @JoinColumn(name = "tutor_id")
-    Persona tutor_id;
+    Personas tutor_id;
 
     private Date fecha;
     private String estado;

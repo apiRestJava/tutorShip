@@ -20,16 +20,20 @@ public class CronogramaCurso {
     @JoinColumn( name = "curso_id" )
     Cursos curso_id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn( name = "docente_id")
-    Persona docente_id;
+    Personas docente_id;
 
     @ManyToOne
     @JoinColumn( name = "tutor_id")
-    Persona tutor_id;
+    Personas tutor_id;
 
+    @Column(name = "horainicio")
     private Time horaInicio;
+
+    @Column(name = "horafin")
     private Time horaFin;
+
     private Date fecha;
     private String estado;
 }

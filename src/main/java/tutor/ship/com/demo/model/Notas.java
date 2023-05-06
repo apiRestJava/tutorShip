@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Date;
-import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -20,11 +19,11 @@ public class Notas {
 
     @ManyToOne
     @JoinColumn(name ="alumno_id")
-    Persona alumno_id;
+    Personas alumno_id;
 
     @ManyToOne
     @JoinColumn(name ="docente_tutor_id")
-    Persona docente_tutor_id;
+    Personas docente_tutor_id;
 
     private double nota;
     private Date fecha;
