@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface CursosRepository extends JpaRepository <Cursos, Integer > {
     @Override
     Optional<Cursos> findById(Integer id);
-    Optional<Cursos> finOneByIdAndCursos(Integer id,String cursos);
+    //Optional<Cursos> finOneByIdAndCursos(Integer id,String cursos);
 }

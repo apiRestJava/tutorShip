@@ -10,8 +10,8 @@ public interface DetalleCursoPersonaRepository extends JpaRepository<DetalleCurs
     @Override
     Optional<DetalleCursoPersona> findById(Integer id);
     Optional<DetalleCursoPersona> findOneById(Integer id);
-    Optional<DetalleCursoPersona> findByAlumnoIdAndEstado(Integer alumnoid, String estado);
-    Optional<DetalleCursoPersona> findByCronogramaCursoIdAndEstado(Integer id, String estado);
-    Optional<DetalleCursoPersona> findByTutorIddAndEstado(Integer id, String estado);
+    //Optional<DetalleCursoPersona> findByAlumnoIdAndEstado(Integer alumnoid, String estado);
+    //Optional<DetalleCursoPersona> findByCronogramaCursoIdAndEstado(Integer id, String estado);
+    //Optional<DetalleCursoPersona> findByTutorIdAndEstado(Integer id, String estado);
     Optional<DetalleCursoPersona> findByEstado(String estado);
 }

@@ -7,6 +7,7 @@ import java.sql.Date;
 
 @Data
 @Entity
+@Table(name = "detallecursopersona")
 public class DetalleCursoPersona {
 
     @Id
@@ -14,17 +15,17 @@ public class DetalleCursoPersona {
     @Column(name = "id")
     private Integer id;
 
-    @OneToMany
-    @JoinColumn(name = "alumno_id", referencedColumnName = "id")
-    private Persona alumno_id;
+    @ManyToOne
+    @JoinColumn(name = "alumno_id")
+    Persona alumno_id;
 
-    @OneToMany
-    @JoinColumn(name = "cronograma_curso_id", referencedColumnName = "id")
-    private CronogramaCurso cronograma_curso_id;
+    @ManyToOne
+    @JoinColumn(name = "cronograma_curso_id")
+    CronogramaCurso cronograma_curso_id;
 
-    @OneToMany
-    @JoinColumn(name = "tutor_id", referencedColumnName = "id")
-    private Persona tutor_id;
+    @ManyToOne
+    @JoinColumn(name = "tutor_id")
+    Persona tutor_id;
 
     private Date fecha;
     private String estado;

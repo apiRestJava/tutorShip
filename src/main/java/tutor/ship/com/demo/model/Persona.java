@@ -11,9 +11,9 @@ public class Persona {
     @Column(name = "id")
     private Integer id;
 
-    @OneToMany
-    @JoinColumn(name ="tipopersona_id" , referencedColumnName = "id")
-    private TipoPersona tipopersona_id;
+    @OneToOne
+    @JoinColumn(name ="tipopersona_id")
+    TipoPersona tipopersona_id;
 
     private String nombresApellidos;
     private String correo;

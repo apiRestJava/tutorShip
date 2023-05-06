@@ -8,6 +8,7 @@ import java.sql.Time;
 
 @Data
 @Entity
+@Table(name = "cronogramacurso")
 public class CronogramaCurso {
 
     @Id
@@ -15,17 +16,17 @@ public class CronogramaCurso {
     @Column( name = "id")
     private Integer id;
 
-    @OneToMany
-    @JoinColumn( name = "curso_id", referencedColumnName = "id")
-    private Cursos curso_id;
+    @ManyToOne
+    @JoinColumn( name = "curso_id" )
+    Cursos curso_id;
 
-    @OneToMany
-    @JoinColumn( name = "docente_id", referencedColumnName = "id")
-    private Persona docente_id;
+    @ManyToOne
+    @JoinColumn( name = "docente_id")
+    Persona docente_id;
 
-    @OneToMany
-    @JoinColumn( name = "tutor_id", referencedColumnName = "id")
-    private Persona tutor_id;
+    @ManyToOne
+    @JoinColumn( name = "tutor_id")
+    Persona tutor_id;
 
     private Time horaInicio;
     private Time horaFin;

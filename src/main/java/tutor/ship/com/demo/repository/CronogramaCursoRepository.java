@@ -13,9 +13,9 @@ public interface CronogramaCursoRepository extends JpaRepository <CronogramaCurs
     Optional<CronogramaCurso> findById(Integer id);
 
     Optional<CronogramaCurso> findOneById(Integer id);
-    Optional<CronogramaCurso> findOneByIdAndCursoId(Integer id, Integer cursoid);
-    Optional<CronogramaCurso> findOneByIdAndDocenteid(Integer id, Integer docenteid);
-    Optional<CronogramaCurso> findOneByIdAndTutorId(Integer id, Integer tutor_id);
-    Optional<CronogramaCurso> findOneByFecha(Date fecha);
-    Optional<CronogramaCurso> findOneByEstado(String estado);
+    //Optional<CronogramaCurso> findByIdAndCurso_Id(Integer id, Integer cursoid);
+    //Optional<CronogramaCurso> findByIdAndDocente_id(Integer id, Integer docenteid);
+    //Optional<CronogramaCurso> findByIdAndTutor_Id(Integer id, Integer tutor_id);
+    Optional<CronogramaCurso> findByFecha(Date fecha);
+    Optional<CronogramaCurso> findByEstado(String estado);
 }

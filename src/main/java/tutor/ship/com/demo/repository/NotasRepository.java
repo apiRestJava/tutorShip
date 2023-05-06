@@ -9,5 +9,5 @@ public interface NotasRepository extends JpaRepository<Notas,Integer> {
 
     @Override
     Optional<Notas> findById(Integer id);
-    Optional<Notas> finOneByIdAndNotas(Integer id,String notas);
+    //Optional<Notas> finOneByIdAndNotas(Integer id,String notas);
 }

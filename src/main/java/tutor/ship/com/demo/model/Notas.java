@@ -14,17 +14,17 @@ public class Notas {
     @Column(name = "id")
     private Integer id;
 
-    @ManyToMany
-    @JoinColumn(name ="cronograma_curso_id" , referencedColumnName = "id")
-    private CronogramaCurso cronograma_curso_id;
+    @ManyToOne
+    @JoinColumn(name ="cronograma_curso_id" )
+    CronogramaCurso cronograma_curso_id;
 
-    @ManyToMany
-    @JoinColumn(name ="alumno_id" , referencedColumnName = "id")
-    private Persona alumno_id;
+    @ManyToOne
+    @JoinColumn(name ="alumno_id")
+    Persona alumno_id;
 
-    @OneToMany
-    @JoinColumn(name ="docente_tutor_id" , referencedColumnName = "id")
-    private Persona docente_tutor_id;
+    @ManyToOne
+    @JoinColumn(name ="docente_tutor_id")
+    Persona docente_tutor_id;
 
     private double nota;
     private Date fecha;
