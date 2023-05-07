@@ -1,22 +1,23 @@
 package tutor.ship.com.demo.controller.dto;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
+import tutor.ship.com.demo.model.Cursos;
 import tutor.ship.com.demo.model.Personas;
 
 import java.sql.Date;
 import java.sql.Time;
-
+@Getter
+@Setter
 public class CronogramaCursoDTO {
-    @NotBlank
+    private Cursos curso_id;
     private Personas docente_id;
-    @NotBlank
     private Personas tutor_id;
-    @NotBlank
     private Time horaInicio;
-    @NotBlank
     private Time horaFin;
-    @NotBlank
     private Date fecha;
-    @NotBlank
     private String estado;
 }
