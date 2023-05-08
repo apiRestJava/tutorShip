@@ -3,7 +3,7 @@ package tutor.ship.com.demo.controller.dto;
 import jakarta.validation.constraints.NotBlank;
 
 public class PersonaDTO {
-    @NotBlank
+
     private Integer tipopersona_id;
 
     @NotBlank
