@@ -14,8 +14,10 @@ import tutor.ship.com.demo.model.Cursos;
 import tutor.ship.com.demo.repository.CursosRepository;
 import tutor.ship.com.demo.repository.PersonaRepository;
 
+import java.nio.file.Path;
+
 @RestController
-@RequestMapping("/api/cursos")
+@RequestMapping(path="/api/cursos")
 public class CursoController {
     @Autowired
     private CursosRepository cursosRepository;

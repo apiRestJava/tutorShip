@@ -5,7 +5,6 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.util.Date;
-
 @Data
 public class NotaDTO {
   @Size(min=20 ,max=25)
