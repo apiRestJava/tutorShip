@@ -12,7 +12,7 @@ public class Personas {
     @Column(name = "id")
     private Integer id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name ="tipopersona_id")
     TipoPersona tipopersona_id;
 
