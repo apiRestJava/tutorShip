@@ -3,19 +3,23 @@ package tutor.ship.com.demo.controller.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import tutor.ship.com.demo.model.CronogramaCurso;
+import tutor.ship.com.demo.model.Personas;
 
 import java.util.Date;
-@Data
+@Getter
+@Setter
 public class NotaDTO {
-  @Size(min=20 ,max=25)
-    @NotBlank
-    private Integer cronograma_curso_id;
-    @NotBlank
-    private Integer alumno_id;
-    @NotBlank
-    private Integer docente_id;
+
+    private CronogramaCurso cronograma_curso_id;
+
+    private Personas alumno_id;
+
+    private Personas docente_tutor_id;
+    private Double nota;
     private Date fecha;
-    @NotBlank
     private String estado;
 
 
