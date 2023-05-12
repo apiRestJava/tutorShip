@@ -24,4 +24,8 @@ public class Personas {
     private String usuario;
     private String password;
     private String estado;
+
+    @ManyToOne
+    @JoinColumn(name = "institucion_id")
+    Institucion institucion_id;
 }
