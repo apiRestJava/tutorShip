@@ -14,7 +14,7 @@ public interface NotasRepository extends JpaRepository<Notas,Integer> {
     //Optional<Notas> findOneByIdAndCronograma_curso_id(Integer id, Integer cronograma_curso_id);
    // Optional<Notas> findOneByIdAndAlumno_id(Integer id, Integer alumno_id);
    // Optional<Notas> findOneByIdAndDocente_tutor_id(Integer id, Integer docente_tutor_id);
-  //  Optional<Notas> findOneByNota(Integer id, Integer nota);mmm
+  //  Optional<Notas> findOneByNota(Integer id, Integer nota);
     Optional<Notas> findOneByFecha(Date fecha);
     Optional<Notas> findOneByEstado(String estado);
 }

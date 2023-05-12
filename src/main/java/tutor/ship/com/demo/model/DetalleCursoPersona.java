@@ -1,5 +1,6 @@
 package tutor.ship.com.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,15 +18,15 @@ public class DetalleCursoPersona {
 
     @ManyToOne
     @JoinColumn(name = "alumno_id")
-    Personas alumno_id;
+    private Personas alumno_id;
 
     @ManyToOne
     @JoinColumn(name = "cronograma_curso_id")
-    CronogramaCurso cronograma_curso_id;
+    private CronogramaCurso cronograma_curso_id;
 
     @ManyToOne
     @JoinColumn(name = "tutor_id")
-    Personas tutor_id;
+    private Personas tutor_id;
 
     private Date fecha;
     private String estado;

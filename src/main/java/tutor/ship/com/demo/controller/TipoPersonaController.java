@@ -1,21 +1,29 @@
 package tutor.ship.com.demo.controller;
 
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.Id;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import tutor.ship.com.demo.controller.dto.PersonaDTO;
 import tutor.ship.com.demo.controller.dto.TipoPersonaDTO;
+import tutor.ship.com.demo.model.Personas;
 import tutor.ship.com.demo.model.TipoPersona;
 import tutor.ship.com.demo.repository.TipoPersonaRepository;
 
 @RestController
 @RequestMapping("api/TipoPersona")
 public class TipoPersonaController {
-    private final TipoPersonaRepository tipoPersonaRepository;
-    public TipoPersonaController(TipoPersonaRepository tipoPersonaRepository){
-        this.tipoPersonaRepository = tipoPersonaRepository;
+    @Autowired
+    private  TipoPersonaRepository tipoPersonaRepository;
+
+    @GetMapping
+    Page<TipoPersona> index(@PageableDefault(sort = "id", size = 5) Pageable pageable){
+        return tipoPersonaRepository.findAll(pageable);
     }
 
     @GetMapping("/{id}")
