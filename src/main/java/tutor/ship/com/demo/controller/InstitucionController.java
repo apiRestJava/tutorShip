@@ -13,6 +13,7 @@ import tutor.ship.com.demo.controller.dto.InstitucionDTO;
 import tutor.ship.com.demo.model.Institucion;
 import tutor.ship.com.demo.repository.InstitucionRepository;
 
+@CrossOrigin(origins = "http://127.0.0.1:5173")
 @RestController
 @RequestMapping("api/institucion")
 public class InstitucionController {
@@ -20,7 +21,7 @@ public class InstitucionController {
     private InstitucionRepository institucionRepository;
 
     @GetMapping
-    Page<Institucion> index(@PageableDefault(sort = "id", size = 5) Pageable pageable){
+    Page<Institucion> index(@PageableDefault(sort = "id", size = 10) Pageable pageable){
         return institucionRepository.findAll(pageable);
     }
 
