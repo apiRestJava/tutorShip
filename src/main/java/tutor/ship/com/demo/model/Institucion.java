@@ -12,6 +12,7 @@ public class Institucion {
     @Column(name = "id")
     private Integer id;
 
+    private String ruc;
     private String nombre;
     private String direccion;
     private String correo;
