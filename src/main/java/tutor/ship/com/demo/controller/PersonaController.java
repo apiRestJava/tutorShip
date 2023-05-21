@@ -9,9 +9,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import tutor.ship.com.demo.controller.dto.CronogramaCursoDTO;
 import tutor.ship.com.demo.controller.dto.PersonaDTO;
-import tutor.ship.com.demo.model.CronogramaCurso;
 import tutor.ship.com.demo.model.Personas;
 import tutor.ship.com.demo.repository.PersonaRepository;
 

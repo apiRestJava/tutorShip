@@ -14,9 +14,7 @@ import java.util.Date;
 public class NotaDTO {
 
     private CronogramaCurso cronograma_curso_id;
-
     private Personas alumno_id;
-
     private Personas docente_tutor_id;
     private Double nota;
     private Date fecha;
