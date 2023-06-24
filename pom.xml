@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>tutor.ship.com</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>tutorShip</name>
 	<description>Sistema de tutoría para la mejor aprendizaje para ILP / ELP.</description>
 	<properties>
