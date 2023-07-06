@@ -13,6 +13,7 @@ import tutor.ship.com.demo.controller.dto.PersonaDTO;
 import tutor.ship.com.demo.model.Personas;
 import tutor.ship.com.demo.repository.PersonaRepository;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("api/persona")
 public class PersonaController {
